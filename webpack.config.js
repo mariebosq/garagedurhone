@@ -30,7 +30,27 @@ Encore
     .addEntry('waypoints', "./assets/plugins/counter/waypoints-min.js")
     .addEntry('counterup', './assets/plugins/counter/counterup.min.js')
     .addEntry('imagesloaded', './assets/plugins/imagesloaded/imagesloaded.js')
-  
+    .addEntry('masonry', './assets/plugins/masonry/masonry-3.1.4.js')
+    .addEntry('filter', "./assets/plugins/masonry/masonry.filter.js")
+    .addEntry('carousel', './assets/plugins/owl-carousel/owl.carousel.js')
+    .addEntry('custom', './assets/js/custom.min.js')
+    .addEntry('dz', './assets/js/dz.carousel.min.js')
+
+    .addEntry('lightall', './assets/plugins/lightgallery/js/lightgallery-all.js')
+    .addEntry('ajax', './assets/js/dz.ajax.js')
+    .addEntry('tools', './assets/plugins/revolution/js/jquery.themepunch.tools.min.js')
+    .addEntry('revolution', './assets/plugins/revolution/js/jquery.themepunch.revolution.min.js')
+    .addEntry('action', './assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js')
+    .addEntry('extension', './assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js')
+    .addEntry('kenburn', './assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js')
+    //.addEntry('layer', './asset/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js')
+    .addEntry('migration', './assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js')
+    .addEntry('navigation', './assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js')
+    .addEntry('parallax', './assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js')
+    .addEntry('slideanim', './assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js')
+    .addEntry('video', './assets/plugins/revolution/js/extensions/revolution.extension.video.min.js')
+    .addEntry('slider', './assets/js/rev.slider.js')
+    
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
 
