@@ -18,7 +18,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Auto Care - Car Services Template</title>
+	<title>Garage du Rhône</title>
 	
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,18 +32,7 @@
      {% block stylesheets %}
         {# 'app' must match the first argument to addEntry() in webpack.config.js #}
         {{ encore_entry_link_tags('app') }}
-      
-
-        <!-- Renders a link tag (if your module requires any CSS)
-                <link rel="stylesheet" href="/build/app.css"> -->
     {% endblock %}
-	<link rel="stylesheet" type="text/css" href="css/style.min.css">
-	<link rel="stylesheet" type="text/css" href="css/templete.min.css">
-	<link class="skin"  rel="stylesheet" type="text/css" href="css/skin/skin-1.css">
-	<!-- Revolution Slider Css -->
-	<link rel="stylesheet" type="text/css" href="plugins/revolution/css/settings.css">
-	<link rel="stylesheet" type="text/css" href="plugins/revolution/css/navigation.css">
-	
 </head>
 <body id="bg"><div id="loading-area"></div>
 <div class="page-wraper">
@@ -71,7 +60,7 @@
             <div class="main-bar bg-primary clearfix ">
                 <div class="container clearfix">
                     <!-- website logo -->
-                    <div class="logo-header mostion"><a href="index.html"><img src="images/logo.png" width="193" height="89" alt=""></a></div>
+                    <div class="logo-header mostion"><a href="index.html">Garage du Rhône</a></div>
                     <!-- nav toggle button -->
 					<button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 						<span></span>
@@ -312,7 +301,7 @@
                                 <!-- SLIDE 1 -->
                                 <li data-index="rs-1000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/main-slider/slide1.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                     <!-- MAIN IMAGE -->
-                                    <img src="images/main-slider/slide1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+                                    <img src="{{ asset('build/images/main-slider/slide1.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                                     <!-- LAYER NR. 1 [ for overlay ] -->
                                     <div class="tp-caption tp-shape tp-shapewrapper " 
 										id="slide-100-layer-1" 
@@ -407,7 +396,7 @@
                                 <!-- SLIDE 2 -->
                                 <li data-index="rs-2000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/main-slider/slide2.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                     <!-- MAIN IMAGE -->
-                                    <img src="images/main-slider/slide2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+                                    <img src="{{ asset('build/images/main-slider/slide2.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                                     <!-- LAYERS -->
                                     <!-- LAYER NR. 1 [ for overlay ] -->
                                     <div class="tp-caption tp-shape tp-shapewrapper " 
@@ -502,7 +491,7 @@
                                 <!-- SLIDE 3 -->
                                 <li data-index="rs-3000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slide3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                     <!-- MAIN IMAGE -->
-                                    <img src="images/main-slider/slide3.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+                                    <img src="{{ asset('build/images/main-slider/slide3.jpg') }}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                                     <!-- LAYERS -->
                                     <!-- LAYER NR. 1 [ for overlay ] -->
                                     <div class="tp-caption tp-shape tp-shapewrapper " 
@@ -1301,53 +1290,38 @@
 <!-- JavaScript  files ========================================= -->
  {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
-    {{ encore_entry_script_tags('jquery') }}
-    {{ encore_entry_script_tags('popper') }}
-    {{ encore_entry_script_tags('bootstrap') }}
-    {{ encore_entry_script_tags('select') }}
-    {{ encore_entry_script_tags('touch') }}
-    {{ encore_entry_script_tags('popup') }}
-    {{ encore_entry_script_tags('waypoints') }}
-    {{ encore_entry_script_tags('counterup') }}
-   
+    {{ encore_entry_script_tags('jquery') }}<!-- JQUERY.MIN JS -->
+    {{ encore_entry_script_tags('popper') }}<!-- BOOTSTRAP.MIN JS -->
+    {{ encore_entry_script_tags('bootstrap') }}<!-- BOOTSTRAP.MIN JS -->
+    {{ encore_entry_script_tags('select') }}<!-- FORM JS -->
+    {{ encore_entry_script_tags('touch') }}<!-- FORM JS -->
+    {{ encore_entry_script_tags('popup') }}<!-- MAGNIFIC POPUP JS -->
+    {{ encore_entry_script_tags('waypoints') }}<!-- WAYPOINTS JS -->
+    {{ encore_entry_script_tags('counterup') }}<!-- COUNTERUP JS -->
+    {{ encore_entry_script_tags('imagesloaded') }}<!-- IMAGESLOADED -->
+    {{ encore_entry_script_tags('masonry') }}<!-- MASONRY -->
+    {{ encore_entry_script_tags('filter') }}<!-- MASONRY -->
+    {{ encore_entry_script_tags('carousel') }}<!-- OWL SLIDER -->
+    {{ encore_entry_script_tags('custom') }}<!-- CUSTOM FUCTIONS  -->
+    {{ encore_entry_script_tags('dz') }}<!-- SORTCODE FUCTIONS  -->
 
-
-    <!-- Renders app.js & a webpack runtime.js file
-        <script src="/build/runtime.js" defer></script>
-        <script src="/build/app.js" defer></script>
-        See note below about the "defer" attribute -->
+    {{ encore_entry_script_tags('lightall') }}<!-- LIGHT GALLERY -->
+    {{ encore_entry_script_tags('ajax') }}<!-- CONTACT JS -->
+    <!-- REVOLUTION JS FILES -->
+    {{ encore_entry_script_tags('tools') }}
+    {{ encore_entry_script_tags('action') }}
+    <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    {{ encore_entry_script_tags('revolution') }}
+    {{ encore_entry_script_tags('extension') }}
+    {{ encore_entry_script_tags('kenburn') }}
+   {# {{ encore_entry_script_tags('layer') }} #}
+    {{ encore_entry_script_tags('migration') }}
+    {{ encore_entry_script_tags('navigation') }}
+    {{ encore_entry_script_tags('parallax') }}
+    {{ encore_entry_script_tags('slideanim') }}
+    {{ encore_entry_script_tags('video') }}
+    {{ encore_entry_script_tags('slider') }}
 {% endblock %}
-<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
-<script src="plugins/bootstrap/js/popper.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="plugins/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
-<script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
-<script src="plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
-<script src="plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
-<script src="plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script src="plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
-<script src="plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
-<script src="plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
-<script src="plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
-<script src="js/custom.min.js"></script><!-- CUSTOM FUCTIONS  -->
-<script src="js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
-
-<script src="plugins/lightgallery/js/lightgallery-all.js"></script><!-- LIGHT GALLERY -->
-<script src="js/dz.ajax.js"></script><!-- CONTACT JS -->
-<!-- REVOLUTION JS FILES -->
-<script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="js/rev.slider.js"></script>
 <script>
 jQuery(document).ready(function() {
 	'use strict';
