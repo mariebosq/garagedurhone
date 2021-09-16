@@ -10,6 +10,8 @@ import './styles/app.css';
 import './styles/style.css';
 import './styles/templete.css';
 import './styles/skin/skin-1.css';
+import './plugins/revolution/css/settings.css';
+import './plugins/revolution/css/navigation.css';
 
 // start the Stimulus application
 import './bootstrap';
