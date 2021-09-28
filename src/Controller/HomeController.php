@@ -14,6 +14,14 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->render('index.html.twig');
+        return $this->render('index.html');
+    }
+
+    /**
+     * @Route("/countdown", name="Décomptee")
+     */
+    public function countdown()
+    {
+        return $this->render('coming-soon-1.html');
     }
 }
