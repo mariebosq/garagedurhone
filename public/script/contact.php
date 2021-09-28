@@ -23,10 +23,10 @@ Variable
 require('recaptcha-master/src/autoload.php');
 
 /* ReCaptch Secret */
-$recaptchaSecret = '6LefsVUUAAAAABy0gWJlqIPO3YpVkxgcjy9XJ5kQ';
+$recaptchaSecret = '6LdUcZccAAAAAKadeFaH4dyqNQpWL6Blnoj7MteD';
 
 $dzEmailTo 		= "test@dexignlab.com";   /* Receiver Email Address */
-$dzEmailFrom    = "Auto Care Contact";
+$dzEmailFrom    = "Formulaire de contact du Garage du Rhône";
 
 function pr($value)
 {
