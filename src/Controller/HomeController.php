@@ -18,10 +18,19 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/countdown", name="Décomptee")
+     * @Route("/countdown", name="Decompte")
      */
     public function countdown()
     {
         return $this->render('coming-soon-1.html');
     }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact()
+    {
+        return $this->render('contact-2.html');
+    }
+
 }
