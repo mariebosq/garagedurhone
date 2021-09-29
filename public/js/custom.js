@@ -558,9 +558,10 @@ var Autocare = function(){
 	/* Countdown ============ */
 	var handleCountDown = function(WebsiteLaunchDate){
 		/* Time Countr Down Js */
+		console.log($(".countdown"), '$(".countdown")$(".countdown")$(".countdown")');
 		if($(".countdown").length)
 		{
-			$('.countdown').countdown({date: "01 November 2021"+' 23:5'}, function() {
+			$('.countdown').countdown({date: "2021/11/01"}, function() {
 				$('.countdown').text('we are live');
 			});
 		}

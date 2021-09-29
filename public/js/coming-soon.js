@@ -3,6 +3,7 @@ var WebsiteLaunchDate = new Date();
 monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 WebsiteLaunchDate.setMonth(WebsiteLaunchDate.getMonth() + 1);
 WebsiteLaunchDate =  WebsiteLaunchDate.getDate() + " " + monthNames[WebsiteLaunchDate.getMonth()] + " " + WebsiteLaunchDate.getFullYear(); 
+
 /* Website Launch Date END */ 
 /* Set Footer Section */	
 function setFooterSection()
