@@ -18,7 +18,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/countdown", name="Decompte")
+     * @Route("/countdown", name="Décompte")
      */
     public function countdown()
     {
@@ -31,6 +31,14 @@ class HomeController extends AbstractController
     public function contact()
     {
         return $this->render('contact-2.html');
+    }
+
+     /**
+     * @Route("/prestations", name="Préstations")
+     */
+    public function nosPrestations()
+    {
+        return $this->render('all-service.html');
     }
 
 }
