@@ -41,4 +41,12 @@ class HomeController extends AbstractController
         return $this->render('all-service.html');
     }
 
+    /**
+     * @Route("/equipe", name="Notre équipe")
+     */
+    public function ourTeam()
+    {
+        return $this->render('our-team.html');
+    }
+
 }
