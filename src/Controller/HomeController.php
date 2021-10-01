@@ -42,11 +42,13 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/equipe", name="Notre équipe")
+     * @Route("/detailling", name="Detailling")
      */
-    public function ourTeam()
+    public function detailling()
     {
-        return $this->render('our-team.html');
+        return $this->render('brake-repair.html');
     }
+
+
 
 }
