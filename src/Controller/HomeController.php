@@ -49,6 +49,20 @@ class HomeController extends AbstractController
         return $this->render('brake-repair.html');
     }
 
+    /**
+     * @Route("/carwebshop", name="carwebshop")
+     */
+    public function carWebShop()
+    {
+        return $this->render('shop-grid-4.html');
+    }
 
+    /**
+     * @Route("/product-details", name="Détail du produit")
+     */
+    public function productDetails()
+    {
+        return $this->render('shop-product-details.html');
+    }
 
 }
