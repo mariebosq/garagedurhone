@@ -1,17 +1,90 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="AutoCare is well designed creating websites of automotive repair shops, stores with spare parts and accessories for car repairs, car washes, car danting and panting, service stations, car showrooms painting, major auto centers and other sites related to cars and car services." />
+	<meta property="og:title" content="Auto Care - Car Services Template" />
+	<meta property="og:description" content="AutoCare is well designed creating websites of automotive repair shops, stores with spare parts and accessories for car repairs, car washes, car danting and panting, service stations, car showrooms painting, major auto centers and other sites related to cars and car services." />
+	<meta property="og:image" content="http://autocare.dexignlab.com/xhtml/social-image.png" />
+	<meta name="format-detection" content="telephone=no">
 
-{% block title %}Register{% endblock %}
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	
+	<!-- PAGE TITLE HERE -->
+	<title>Auto Care - Car Services Template</title>
+	
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block body %}
-    <h1>Register</h1>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+		
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+	<link class="skin"  rel="stylesheet" type="text/css" href="css/skin/skin-1.css">
+	<link rel="stylesheet" type="text/css" href="css/templete.min.css">
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+</head>
+<body id="bg" class="full-boxed">
+<div id="loading-area"></div>
+<div class="page-wrapers">
+    <!-- Content -->
+    <div class="page-content dlab-login bg-secondry">
+		<div class="top-head text-center logo-header">
+			<a href="index.html">
+				<img src="images/logo.png" alt=""/>
+			</a>
+		</div>
+        <div class="login-form">
+			<div class="tab-content">
+                <div id="developement-1">
+                   {{ form_start(registrationForm, {'attr': {'class': 'p-a30 dlab-form text-center'}}) }}
+                        <h1 class="form-title m-t0">S'incrire</h1>
+                        <div class="dlab-separator-outer m-b5">
+                            <div class="dlab-separator bg-primary style-liner"></div>
+                        </div>
+                        <p>Renseigner les champs suivants: </p>
+                        <div class="form-group">
+                         {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}} ) }}
+                        </div>
+                       
+						{{ form_row(registrationForm.plainPassword) }}
+                        
+                        <div class="form-group text-left mt-5"> 
+							<a class="site-button outline gray" href="/login">Se connecter</a>
+                            <button class="site-button pull-right">S'incrire</button>
+                        </div>
+                     {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+          
+<!-- JavaScript  files ========================================= -->
+<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="plugins/bootstrap/js/popper.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+<script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+<script src="plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+<script src="plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+<script src="plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+<script src="plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+<script src="plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+<script src="js/custom.min.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
+<script src="js/dz.ajax.js"></script><!-- CONTACT JS  -->
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
-{% endblock %}
+
+</body>
+</html>
